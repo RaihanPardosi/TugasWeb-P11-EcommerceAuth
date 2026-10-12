@@ -2,6 +2,7 @@
 
 @php
     $icons = [
+        'flag' => '<path d="M5 21V3"/><path d="M5 4h14l-2.5 4.5L19 13H5"/><path d="M10 4v9M14.5 4v9M5 8.5h13"/>',
         'cup' => '<path d="M4.5 9h11v4.5a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5V9z"/><path d="M15.5 10.5h1.25a2.25 2.25 0 0 1 0 4.5H15.5"/><path d="M8 3.5v2M11 3.5v2"/><path d="M3 20.5h14"/>',
         'bean' => '<ellipse cx="12" cy="12" rx="5.5" ry="8.5" transform="rotate(35 12 12)"/><path d="M8.2 6.6c3.6 1.2 1.4 4.6 3.8 5.7s1.6 3.8 3.8 5.1"/>',
         'funnel' => '<path d="M3.5 5h17l-5.75 9v4a1 1 0 0 1-1 1h-3.5a1 1 0 0 1-1-1v-4L3.5 5z"/><path d="M7 9h10"/>',

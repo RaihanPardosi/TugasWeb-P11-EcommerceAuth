@@ -1,42 +1,73 @@
 <x-app-layout title="Beranda">
-    <section class="bg-amber-950 text-amber-50">
-        <div class="mx-auto grid max-w-7xl items-center gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:px-8 lg:py-20">
+    <section class="relative overflow-hidden bg-zinc-950 text-zinc-100 rc-cut">
+        <div class="rc-stripes pointer-events-none absolute -right-24 top-0 hidden h-full w-1/2 opacity-30 md:block" aria-hidden="true"></div>
+        <div class="relative mx-auto grid max-w-7xl items-center gap-10 px-4 pb-20 pt-14 sm:px-6 md:grid-cols-2 lg:px-8 lg:pb-28 lg:pt-20">
             <div>
-                <p class="text-sm font-semibold uppercase tracking-widest text-amber-400">Toko kopi dan alat seduh</p>
-                <h1 class="mt-4 text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl">Kopi pilihan Sumatera, lengkap dengan alat seduhnya.</h1>
-                <p class="mt-5 max-w-xl text-lg text-amber-100/80">Biji kopi sangrai dari Gayo, Sidikalang, dan Mandailing, ditambah dripper, grinder, serta perlengkapan seduh untuk dapur di rumah.</p>
+                <p class="flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-red-500"><span class="h-0.5 w-8 bg-red-600"></span>Toko kopi dan alat seduh</p>
+                <h1 class="mt-4 text-5xl font-extrabold leading-[0.95] sm:text-7xl">Kopi pilihan Sumatera, lengkap dengan alat seduhnya.</h1>
+                <p class="mt-5 max-w-xl text-lg text-zinc-300">Biji kopi sangrai dari Gayo, Sidikalang, dan Mandailing, ditambah dripper, grinder, serta perlengkapan seduh untuk dapur di rumah.</p>
                 <div class="mt-8 flex flex-wrap gap-3">
-                    <a href="{{ route('products.index') }}" class="inline-flex items-center justify-center gap-2 rounded-lg bg-amber-500 px-5 py-3 text-sm font-semibold text-amber-950 transition hover:bg-amber-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-white">
+                    <x-button-link href="{{ route('products.index') }}" class="px-5 py-3">
                         Lihat semua produk
                         <x-icon name="arrow-right" class="h-4 w-4" />
-                    </a>
+                    </x-button-link>
                     <x-button-link variant="dark" href="{{ route('posts.index') }}" class="px-5 py-3">Baca artikel</x-button-link>
                 </div>
 
-                <dl class="mt-10 grid max-w-md grid-cols-3 gap-6 border-t border-amber-800 pt-6">
+                <dl class="mt-10 grid max-w-md grid-cols-3 gap-6 border-t border-zinc-800 pt-6">
                     <div>
-                        <dt class="text-xs uppercase tracking-wide text-amber-300/70">Produk</dt>
-                        <dd class="mt-1 text-2xl font-bold">{{ $stats['products'] }}</dd>
+                        <dt class="text-xs font-semibold uppercase tracking-wide text-zinc-400">Produk</dt>
+                        <dd class="rc-display mt-1 text-4xl font-bold text-white">{{ $stats['products'] }}</dd>
                     </div>
                     <div>
-                        <dt class="text-xs uppercase tracking-wide text-amber-300/70">Kategori</dt>
-                        <dd class="mt-1 text-2xl font-bold">{{ $stats['categories'] }}</dd>
+                        <dt class="text-xs font-semibold uppercase tracking-wide text-zinc-400">Kategori</dt>
+                        <dd class="rc-display mt-1 text-4xl font-bold text-white">{{ $stats['categories'] }}</dd>
                     </div>
                     <div>
-                        <dt class="text-xs uppercase tracking-wide text-amber-300/70">Artikel</dt>
-                        <dd class="mt-1 text-2xl font-bold">{{ $stats['posts'] }}</dd>
+                        <dt class="text-xs font-semibold uppercase tracking-wide text-zinc-400">Artikel</dt>
+                        <dd class="rc-display mt-1 text-4xl font-bold text-white">{{ $stats['posts'] }}</dd>
                     </div>
                 </dl>
             </div>
 
             <div class="flex justify-center">
                 <svg viewBox="0 0 320 280" fill="none" class="w-full max-w-sm" aria-hidden="true">
-                    <ellipse cx="150" cy="240" rx="118" ry="16" class="fill-amber-900"/>
-                    <path d="M60 110H240V158C240 198 208 230 168 230H132C92 230 60 198 60 158Z" class="fill-amber-700"/>
-                    <path d="M240 128H254A26 26 0 0 1 254 180H238" class="stroke-amber-700" stroke-width="14" stroke-linecap="round"/>
-                    <ellipse cx="150" cy="110" rx="90" ry="12" class="fill-amber-950"/>
-                    <ellipse cx="150" cy="110" rx="78" ry="8" class="fill-amber-900"/>
-                    <path d="M118 84c-12-14 10-24 0-40M152 88c-12-14 10-24 0-40M186 84c-12-14 10-24 0-40" class="stroke-amber-300" stroke-width="5" stroke-linecap="round" opacity="0.7"/>
+                    <circle cx="160" cy="140" r="128" class="fill-zinc-900 stroke-zinc-700" stroke-width="6"/>
+                    <circle cx="160" cy="140" r="116" class="stroke-zinc-800" stroke-width="2"/>
+                    <line x1="97.8" y1="202.2" x2="85.0" y2="215.0" class="stroke-zinc-400" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="81.4" y1="195.1" x2="73.2" y2="200.8" class="stroke-zinc-400" stroke-width="1.5" stroke-linecap="round"/>
+                    <line x1="73.0" y1="180.6" x2="63.9" y2="184.8" class="stroke-zinc-400" stroke-width="1.5" stroke-linecap="round"/>
+                    <line x1="75.0" y1="162.8" x2="57.6" y2="167.4" class="stroke-zinc-400" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="64.4" y1="148.4" x2="54.4" y2="149.2" class="stroke-zinc-400" stroke-width="1.5" stroke-linecap="round"/>
+                    <line x1="64.4" y1="131.6" x2="54.4" y2="130.8" class="stroke-zinc-400" stroke-width="1.5" stroke-linecap="round"/>
+                    <line x1="75.0" y1="117.2" x2="57.6" y2="112.6" class="stroke-zinc-400" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="73.0" y1="99.4" x2="63.9" y2="95.2" class="stroke-zinc-400" stroke-width="1.5" stroke-linecap="round"/>
+                    <line x1="81.4" y1="84.9" x2="73.2" y2="79.2" class="stroke-zinc-400" stroke-width="1.5" stroke-linecap="round"/>
+                    <line x1="97.8" y1="77.8" x2="85.0" y2="65.0" class="stroke-zinc-400" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="104.9" y1="61.4" x2="99.2" y2="53.2" class="stroke-zinc-400" stroke-width="1.5" stroke-linecap="round"/>
+                    <line x1="119.4" y1="53.0" x2="115.2" y2="43.9" class="stroke-zinc-400" stroke-width="1.5" stroke-linecap="round"/>
+                    <line x1="137.2" y1="55.0" x2="132.6" y2="37.6" class="stroke-zinc-400" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="151.6" y1="44.4" x2="150.8" y2="34.4" class="stroke-zinc-400" stroke-width="1.5" stroke-linecap="round"/>
+                    <line x1="168.4" y1="44.4" x2="169.2" y2="34.4" class="stroke-zinc-400" stroke-width="1.5" stroke-linecap="round"/>
+                    <line x1="182.8" y1="55.0" x2="187.4" y2="37.6" class="stroke-zinc-400" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="200.6" y1="53.0" x2="204.8" y2="43.9" class="stroke-zinc-400" stroke-width="1.5" stroke-linecap="round"/>
+                    <line x1="215.1" y1="61.4" x2="220.8" y2="53.2" class="stroke-zinc-400" stroke-width="1.5" stroke-linecap="round"/>
+                    <line x1="222.2" y1="77.8" x2="235.0" y2="65.0" class="stroke-zinc-400" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="238.6" y1="84.9" x2="246.8" y2="79.2" class="stroke-zinc-400" stroke-width="1.5" stroke-linecap="round"/>
+                    <line x1="247.0" y1="99.4" x2="256.1" y2="95.2" class="stroke-zinc-400" stroke-width="1.5" stroke-linecap="round"/>
+                    <line x1="245.0" y1="117.2" x2="262.4" y2="112.6" class="stroke-zinc-400" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="255.6" y1="131.6" x2="265.6" y2="130.8" class="stroke-red-500" stroke-width="1.5" stroke-linecap="round"/>
+                    <line x1="255.6" y1="148.4" x2="265.6" y2="149.2" class="stroke-red-500" stroke-width="1.5" stroke-linecap="round"/>
+                    <line x1="245.0" y1="162.8" x2="262.4" y2="167.4" class="stroke-red-500" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="247.0" y1="180.6" x2="256.1" y2="184.8" class="stroke-red-500" stroke-width="1.5" stroke-linecap="round"/>
+                    <line x1="238.6" y1="195.1" x2="246.8" y2="200.8" class="stroke-red-500" stroke-width="1.5" stroke-linecap="round"/>
+                    <line x1="222.2" y1="202.2" x2="235.0" y2="215.0" class="stroke-red-500" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M235.7 133.4A76 76 0 0 1 213.7 193.7" class="stroke-red-600" stroke-width="6" stroke-linecap="round" opacity="0.85"/>
+                    <polygon points="250.9,125.6 159.1,134.1 140.2,143.1 160.9,145.9" class="fill-red-600"/>
+                    <circle cx="160" cy="140" r="14" class="fill-zinc-950 stroke-zinc-600" stroke-width="3"/>
+                    <circle cx="160" cy="140" r="4" class="fill-red-500"/>
+                    <path d="M120 214h80" class="stroke-zinc-700" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M132 226h56" class="stroke-red-600" stroke-width="3" stroke-linecap="round"/>
                 </svg>
             </div>
         </div>
@@ -46,13 +77,13 @@
         <h2 class="text-2xl font-bold tracking-tight">Kategori</h2>
         <div class="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
             @foreach ($categories as $category)
-                <a href="{{ route('products.index', ['kategori' => $category->slug]) }}" class="group flex flex-col items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 transition hover:border-amber-700 dark:border-gray-700 dark:bg-gray-800 dark:hover:border-amber-600">
-                    <span class="grid h-10 w-10 place-items-center rounded-lg bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-500">
+                <a href="{{ route('products.index', ['kategori' => $category->slug]) }}" class="group flex flex-col items-start gap-3 rounded-md border p-4 transition border-zinc-800 bg-zinc-900 hover:border-red-600">
+                    <span class="grid h-10 w-10 place-items-center rounded bg-red-600/15 text-red-500">
                         <x-icon :name="$category->icon()" class="h-5 w-5" />
                     </span>
                     <div>
                         <p class="text-sm font-semibold leading-snug">{{ $category->name }}</p>
-                        <p class="mt-0.5 text-xs text-gray-500 dark:text-gray-400">{{ $category->products_count }} produk</p>
+                        <p class="mt-0.5 text-xs text-zinc-400">{{ $category->products_count }} produk</p>
                     </div>
                 </a>
             @endforeach
@@ -62,13 +93,13 @@
     <section class="mx-auto max-w-7xl px-4 pt-14 sm:px-6 lg:px-8">
         <div class="flex items-end justify-between gap-4">
             <h2 class="text-2xl font-bold tracking-tight">Produk pilihan</h2>
-            <a href="{{ route('products.index') }}" class="inline-flex items-center gap-1 text-sm font-medium text-amber-800 hover:underline dark:text-amber-500">
+            <a href="{{ route('products.index') }}" class="inline-flex items-center gap-1 text-sm font-medium hover:underline text-red-500">
                 Semua produk <x-icon name="arrow-right" class="h-4 w-4" />
             </a>
         </div>
 
         @if ($featured->isEmpty())
-            <p class="mt-6 rounded-xl border border-dashed border-gray-300 p-8 text-center text-sm text-gray-500 dark:border-gray-700 dark:text-gray-400">Belum ada produk pilihan. Jalankan seeder untuk mengisi data.</p>
+            <p class="mt-6 rounded-md border border-dashed p-8 text-center text-sm border-zinc-800 text-zinc-400">Belum ada produk pilihan. Jalankan seeder untuk mengisi data.</p>
         @else
             <div class="mt-6 grid grid-cols-2 gap-4 lg:grid-cols-4">
                 @foreach ($featured as $product)
@@ -82,7 +113,7 @@
         <section class="mx-auto max-w-7xl px-4 pt-14 sm:px-6 lg:px-8">
             <div class="flex items-end justify-between gap-4">
                 <h2 class="text-2xl font-bold tracking-tight">Artikel terbaru</h2>
-                <a href="{{ route('posts.index') }}" class="inline-flex items-center gap-1 text-sm font-medium text-amber-800 hover:underline dark:text-amber-500">
+                <a href="{{ route('posts.index') }}" class="inline-flex items-center gap-1 text-sm font-medium hover:underline text-red-500">
                     Semua artikel <x-icon name="arrow-right" class="h-4 w-4" />
                 </a>
             </div>

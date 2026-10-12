@@ -1,8 +1,8 @@
 <x-guest-layout title="Daftar">
     <h1 class="text-2xl font-bold tracking-tight">Buat akun baru</h1>
-    <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+    <p class="mt-1 text-sm text-zinc-400">
         Sudah punya akun?
-        <a href="{{ route('login') }}" class="font-medium text-amber-800 hover:underline dark:text-amber-500">Masuk</a>
+        <a href="{{ route('login') }}" class="font-medium hover:underline text-red-500">Masuk</a>
     </p>
 
     <form method="POST" action="{{ route('register') }}" class="mt-8 space-y-5">
@@ -34,6 +34,6 @@
 
         <x-primary-button class="w-full">Daftar</x-primary-button>
 
-        <p class="text-center text-xs text-gray-500 dark:text-gray-400">Akun baru otomatis berperan sebagai Pengguna.</p>
+        <p class="text-center text-xs text-zinc-400">Akun baru otomatis berperan sebagai Pengguna.</p>
     </form>
 </x-guest-layout>
